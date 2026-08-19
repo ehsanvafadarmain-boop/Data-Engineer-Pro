@@ -35,13 +35,13 @@ def transform_data(data):
 
     for row in data:
 
-        # محاسبه مبلغ
+        
         amount = row["price"] * row["quantity"]
 
-        # محاسبه مصنوعی و سنگین
+        
         score = calculate_score(row)
 
-        # چند شرط پردازشی
+        
         if amount > 5000:
             level = "HIGH"
         elif amount > 2000:
@@ -107,5 +107,5 @@ if __name__ == "__main__":
 
     print(f"\nExecution time: {time.time() - start:.2f} seconds")
 
-    # برای اینکه بتوانیم Process را با py-spy مانیتور کنیم
+    
     print("\nPipeline finished.")
