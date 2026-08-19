@@ -42,6 +42,10 @@ def transform_data(data):
         score = calculate_score(row)
 
         
+        amount = row["price"] * row["quantity"]
+
+        score = calculate_score(row)
+
         if amount > 5000:
             level = "HIGH"
         elif amount > 2000:
